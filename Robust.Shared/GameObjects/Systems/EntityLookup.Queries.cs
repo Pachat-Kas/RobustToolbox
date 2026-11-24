@@ -834,7 +834,7 @@ public sealed partial class EntityLookupSystem
         var center = Vector2.Transform(tileRef.GridIndices + expand, worldMatrix.Value) * grid.TileSize;
         var translatedBox = Box2.CenteredAround(center, new Vector2(grid.TileSize, grid.TileSize));
 
-        return new Box2Rotated(translatedBox, -angle.Value, center);
+        return new Box2Rotated(translatedBox, angle.Value, center);
     }
 
     #endregion
